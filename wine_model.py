@@ -4,13 +4,16 @@ from sklearn.datasets import load_wine
 from sklearn.tree import DecisionTreeClassifier
 import pandas as pd
 
-d = load_wine()
-print(d['DESCR'])
-df = pd.DataFrame(d['data'], columns=d['feature_names'])
-y = d['target']  # cultivator
+
 
 
 def train_model(X,y):
     m = DecisionTreeClassifier(max_depth=5)
     m.fit(X,y)    
     return m
+
+if __name__ == '__main__':
+d = load_wine()
+print(d['DESCR'])
+df = pd.DataFrame(d['data'], columns=d['feature_names'])
+y = d['target']  # cultivator
