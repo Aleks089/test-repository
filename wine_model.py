@@ -13,7 +13,7 @@ def train_model(X,y):
     return m
 
 if __name__ == '__main__':
-d = load_wine()
-print(d['DESCR'])
-df = pd.DataFrame(d['data'], columns=d['feature_names'])
-y = d['target']  # cultivator
+    d = load_wine()
+    print(d['DESCR'])
+    df = pd.DataFrame(d['data'], columns=d['feature_names'])
+    y = d['target']  # cultivator
